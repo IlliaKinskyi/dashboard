@@ -1,0 +1,17 @@
+@import 'scss/variables.scss';
+
+@media (min-width: 1024px) {
+  .main {
+    margin-left: 71px;
+    margin-top: 41px;
+  }
+}
+
+.main {
+  width: 100vh;
+  h1 {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 51px;
+  }
+}

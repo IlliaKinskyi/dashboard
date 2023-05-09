@@ -1,0 +1,107 @@
+@import 'scss/variables';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 38px;
+  padding-right: 53px;
+  padding-bottom: 40px;
+
+  h2 {
+    font-weight: 600;
+    font-size: 22px;
+  }
+
+  h3 {
+    margin-top: 7px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #16c098;
+  }
+
+  form {
+    display: flex;
+    width: 205px;
+    height: 38px;
+    background: $white-100;
+    border-radius: 10px;
+    align-items: center;
+    padding-left: 11px;
+
+    input {
+      border: none;
+      background: $white-100;
+      color: $grey-100;
+      padding-left: 13px;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    ::-webkit-input-placeholder {
+      /* WebKit, Blink, Edge */
+      color: $grey-100;
+    }
+    :-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: $grey-100;
+      opacity: 1;
+    }
+    ::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: $grey-100;
+      opacity: 1;
+    }
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: $grey-100;
+    }
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: $grey-100;
+    }
+
+    ::placeholder {
+      /* Most modern browsers support this now. */
+      color: $grey-100;
+    }
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    font-weight: 500;
+    font-size: 14px;
+    color: $grey-100;
+    text-align: left;
+    border-bottom: 1px solid $border;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .item {
+    font-weight: 500;
+    font-size: 14px;
+    color: #292d32;
+
+    td:first-child {
+      border: none;
+      width: 38px;
+    }
+
+    td:last-child {
+      border: none;
+      width: 38px;
+    }
+
+    td {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $border;
+    }
+  }
+}

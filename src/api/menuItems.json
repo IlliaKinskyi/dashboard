@@ -1,0 +1,8 @@
+[
+    { "img": "./img/dashboard.svg", "title": "Dashboard" },
+    { "img": "./img/product.svg", "title": "Product" },
+    { "img": "./img/customers.svg", "title": "Customers", "active": true },
+    { "img": "./img/income.svg", "title": "Income" },
+    { "img": "./img/promote.svg", "title": "Promote" },
+    { "img": "./img/help.svg", "title": "Help" }
+  ]

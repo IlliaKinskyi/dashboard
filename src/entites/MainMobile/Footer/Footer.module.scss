@@ -1,0 +1,35 @@
+@import 'scss/variables.scss';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 38px;
+  padding-top: 12px;
+  padding-bottom: 40px;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 28px;
+
+  h4 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: $grey-100;
+    padding-bottom: 7px;
+  }
+
+  .pagination {
+    display: flex;
+
+    button {
+      margin-right: 12px;
+      width: 26px;
+      height: 24px;
+    }
+
+    p {
+      margin-right: 12px;
+      cursor: pointer;
+    }
+  }
+}

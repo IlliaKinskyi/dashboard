@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import Main from 'widgets/Main/index';
+import Sidebar from 'widgets/Sidebar';
+import { useMatchMedia } from 'hooks/use-match-media';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const { isMobile, isDesktop } = useMatchMedia();
+  const [showSidebar, setShowSidebar] = useState(true);
+
+  useEffect(() => {
+    function handleResize() {
+      if (isDesktop) {
+        setShowSidebar(true);
+      }
+    }
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isDesktop]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        {isMobile ? (
+          <button className="showbutton" onClick={() => setShowSidebar(!showSidebar)}>
+            {showSidebar ? '<<<' : '>>>'}
+          </button>
+        ) : (
+          ''
+        )}
+      </div>
+      {showSidebar ? <Sidebar /> : ''}
+      <Main isMobile={isMobile} />
     </div>
   );
 }
